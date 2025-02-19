@@ -126,3 +126,33 @@ Add this content
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         }
     }
+
+# Start Application 
+
+Build and start application with docker compose
+
+    docker-compose up -d --build
+
+Check status application after start
+
+    docker-compose ps
+
+To also check time create and how long is it running
+
+    docker compose ps
+
+Login inside container of application
+
+    docker exec -it <container-name> bash
+
+Stop application
+
+    docker-compose down
+
+Remove all unused containers, networks
+
+    docker system prune
+
+OR even remove images (both dangling and unused)
+
+    docker system prune -a
