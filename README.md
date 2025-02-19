@@ -1,3 +1,9 @@
+# Create Admin User With Command Console
+
+After start docker, you need to create admin role to allow access all function, write command below
+
+    docker-compose exec app php artisan app:create-admin-user
+
 # Docker Compose For Multiple Docker Container
 
     nano docker-compose.yaml
