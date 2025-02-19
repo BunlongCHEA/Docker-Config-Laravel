@@ -72,13 +72,6 @@ Add this content
     # Run migrations
     php artisan migrate --force
     
-    # Create storage symlink
-    #php artisan storage:link
-    
-    # Set correct permissions for storage and bootstrap cache
-    #chmod -R 775 storage bootstrap/cache
-    #chown -R www-data:www-data storage bootstrap/cache
-    
     # Check if public/storage exists, if not, create the symlink
     if [ ! -d "/var/www/html/public/storage" ]; then
         echo "Creating storage symlink... ./public/storage"
