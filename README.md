@@ -147,7 +147,7 @@ Login inside container of application
 
 Stop application
 
-    docker-compose down
+    docker-compose down -v
 
 Remove all unused containers, networks
 
