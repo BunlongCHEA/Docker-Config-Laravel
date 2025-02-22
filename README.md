@@ -4,6 +4,17 @@ After start docker, you need to create admin role to allow access all function, 
 
     docker-compose exec app php artisan app:create-admin-user
 
+# Modify .env For Config Database, Redis, Main, AWS, etc
+
+You can modify to use .env for changing environment to the Laravel project without need to access container app.
+
+    DB_CONNECTION=pgsql
+    DB_HOST=postgres
+    DB_PORT=5432
+    DB_DATABASE=cuisine
+    DB_USERNAME=admins
+    DB_PASSWORD=admin12345
+
 # Docker Compose For Multiple Docker Container
 
     nano docker-compose.yaml
@@ -23,6 +34,8 @@ Add this content:
           - postgres
         networks:
           - laravel_network
+        env_file:
+          - .env
         entrypoint: ["/bin/sh", "/var/www/html/docker-entrypoint.sh"]
       postgres:
         image: postgres:latest
