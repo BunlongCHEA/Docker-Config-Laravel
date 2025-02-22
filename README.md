@@ -6,7 +6,9 @@ After start docker, you need to create admin role to allow access all function, 
 
 # Modify .env For Config Database, Redis, Main, AWS, etc
 
-You can modify to use .env for changing environment to the Laravel project without need to access container app.
+You can modify to use .env for changing environment to the Laravel project without need to access Docker Container - app - 
+
+But the .env config must also the same to what you install Postgres Environment like username, password, etc.
 
     DB_CONNECTION=pgsql
     DB_HOST=postgres
@@ -42,8 +44,8 @@ Add this content:
         container_name: postgres_db
         restart: always
         environment:
-          POSTGRES_USER: admin
-          POSTGRES_PASSWORD: admin123
+          POSTGRES_USER: admins
+          POSTGRES_PASSWORD: admin12345
           POSTGRES_DB: cuisine
         ports:
           - "5432:5432"
