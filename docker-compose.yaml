@@ -11,6 +11,8 @@ services:
       - postgres
     networks:
       - laravel_network
+    env_file:
+      - .env
     entrypoint: ["/bin/sh", "/var/www/html/docker-entrypoint.sh"]
   postgres:
     image: postgres:latest
