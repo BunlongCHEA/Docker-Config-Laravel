@@ -98,7 +98,7 @@ Add this content
         echo "Creating storage symlink... ./public/storage"
         php artisan storage:link
         # Set correct permissions for storage and bootstrap cache
-        chmod -R 775 storage bootstrap/cache
+        chmod -R 777 storage bootstrap/cache
         chown -R www-data:www-data storage bootstrap/cache
     else
         echo "Storage symlink already exists. Skipping."
